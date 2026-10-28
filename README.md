@@ -1,6 +1,8 @@
 # Martinelli Harness: marketplace de plugins
 
-Marketplace privado do harness de IA Engineering. Ele lista o plugin `harness-dev-team`.
+Marketplace do harness de IA Engineering. Ele lista o plugin `harness-dev-team`.
+
+> **Atenção:** os documentos em `docs/` descrevem o processo interno da equipe. Deixe o repositório **privado** antes do primeiro push.
 
 Documentos de referência em `docs/`: base do framework, grill e roadmap de decisões.
 
@@ -10,7 +12,7 @@ Dentro desta pasta:
 
 ```bash
 claude plugin validate .
-claude plugin marketplace add ./martinelli-harness-marketplace
+claude plugin marketplace add ./harness
 claude plugin install harness-dev-team@martinelli-harness
 ```
 
@@ -25,7 +27,7 @@ Depois de editar um arquivo do plugin, rode `/reload-plugins` na sessão. Na pas
 ## 2. Publicar no GitHub (repositório privado)
 
 ```bash
-git remote add origin git@github.com:SUA-ORG/martinelli-harness-marketplace.git
+git remote add origin https://github.com/danilopiskemartinelli/harness.git
 git push -u origin main --tags
 ```
 
@@ -34,11 +36,11 @@ Cada pessoa precisa de acesso de leitura ao repositório e de credencial salva n
 Quem usa registra o marketplace uma vez:
 
 ```bash
-claude plugin marketplace add SUA-ORG/martinelli-harness-marketplace
+claude plugin marketplace add danilopiskemartinelli/harness
 claude plugin install harness-dev-team@martinelli-harness
 ```
 
-Para ativar só em um projeto, rode no projeto: `claude plugin marketplace add SUA-ORG/martinelli-harness-marketplace --scope project` e faça commit do `.claude/settings.json`.
+Para ativar só em um projeto, rode no projeto: `claude plugin marketplace add danilopiskemartinelli/harness --scope project` e faça commit do `.claude/settings.json`.
 
 ## 3. Ciclo de release
 
