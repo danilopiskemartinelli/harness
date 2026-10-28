@@ -1,0 +1,14 @@
+{
+  "name": "martinelli-harness",
+  "description": "Plugins do harness de IA Engineering da Martinelli Advogados",
+  "owner": {
+    "name": "Martinelli Advogados - IA Engineering"
+  },
+  "plugins": [
+    {
+      "name": "harness-dev-team",
+      "source": "./plugins/harness-dev-team",
+      "description": "Grill, aprovação conceitual e documentos do harness Martinelli Dev Team"
+    }
+  ]
+}
